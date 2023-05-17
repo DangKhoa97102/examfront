@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -6,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  constructor() {}
+  constructor(private userService:UserService) {}
   ngOnInit(): void {}
 
   public user = {
     username: '',
     password: '',
-    firstName: '',
-    lastName: '',
+    firstname: '',
+    lastname: '',
     email: '',
     phone: '',
   }
@@ -28,11 +29,11 @@ export class SignupComponent implements OnInit {
     alert("Password is required !!!");
     return;
    }
-   if(this.user.firstName=='' || this.user.firstName == null){
+   if(this.user.firstname=='' || this.user.firstname == null){
     alert("First name is required !!!");
     return;
    }
-   if(this.user.lastName=='' || this.user.lastName == null){
+   if(this.user.lastname=='' || this.user.lastname == null){
     alert("Last name is required !!!");
     return;
    }
@@ -44,5 +45,23 @@ export class SignupComponent implements OnInit {
     alert("Phone number is required !!!");
     return;
    }
+
+   //addUser: userService
+   this.userService.addUser(this.user).subscribe(
+    (data) => {
+      //success
+      console.log(data);
+      alert("success");
+    },
+    (error) => {
+      //error
+      console.log(error);
+      alert("Something wrong, pls try again!");
+    }
+   )
+
+
   }
+
+  
 }
