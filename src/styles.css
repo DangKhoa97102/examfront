@@ -7,4 +7,47 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     text-align: center;
 }
 
+.full-width{
+    width: 100%;
+}
 
+.logo-style{
+    width: 8vw;
+    height: 18vh;
+}
+
+.ml20{
+    margin-left: 20px !important;
+}
+
+.mr20{
+    margin-right: 20px !important;
+}
+
+.mt20{
+    margin-top: 20px !important;
+}
+
+.mb20{
+    margin-bot: 20px !important;
+}
+
+.ml10{
+    margin-left: 10px !important;
+}
+
+.mr10{
+    margin-right: 10px !important;
+}
+
+.mt10{
+    margin-top: 10px !important;
+}
+
+.mb10{
+    margin-bot: 10px !important;
+}
+
+.p30{
+    padding: 30px;
+}
