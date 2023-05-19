@@ -1,1 +1,26 @@
-<h1>This is navbar</h1>
+<!-- <h1>This is navbar</h1> -->
+<mat-toolbar>
+  <!-- logo -->
+  <a [routerLink]="['/']" class="align-center">
+    <mat-icon class="mr10">library_books</mat-icon>
+    <span>ExamPortal</span>
+  </a>
+  <span class="example-spacer"></span>
+
+  <!-- Login -->
+  <a [routerLink]="['/login']">
+    <div class="mr20">
+      <button mat-button class="example-icon favorite-icon">
+        <span>Login</span>
+      </button>
+    </div>
+  </a>
+  <!-- Signup -->
+  <a [routerLink]="['/signup']">
+    <div class="mr20">
+      <button mat-button class="example-icon favorite-icon">
+        <span>Signup</span>
+      </button>
+    </div>
+  </a>
+</mat-toolbar>

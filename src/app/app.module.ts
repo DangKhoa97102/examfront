@@ -18,6 +18,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatChipsModule} from '@angular/material/chips';
 import { HomeComponent } from './pages/home/home.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import {MatCardModule} from '@angular/material/card';
     MatSnackBarModule,
     MatChipsModule,
     MatCardModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
