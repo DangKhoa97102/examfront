@@ -8,20 +8,23 @@
                     </div>
                     
                     <h1 class="text-center">LOGIN</h1>
-    
-                    <form>
+                    
+                    {{ loginData | json}}
+                    <form (ngSubmit)="formSubmit()">
                          <!-- Username -->
                          <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Username</mat-label>
                             <input 
-                           
+                            [(ngModel)]="loginData.username"
+                            name="username"
                             matInput placeholder="Enter your Username">
-                        </mat-form-field>
+                        </mat-form-field>`
                         <!-- Password -->
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Password</mat-label>
                             <input 
-                            
+                            [(ngModel)]="loginData.password"
+                            name="password"
                             type="password" matInput placeholder="Enter your Password">
                         </mat-form-field>
                         <div class="container text-center">
