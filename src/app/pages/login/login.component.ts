@@ -45,10 +45,33 @@ export class LoginComponent implements OnInit {
       (data:any)=>{
         console.log("success");
         console.log(data);
+        
+        //login
+        this.login.loginUser(data.token);
+
+        this.login.getCurrentUser().subscribe(
+          (user:any)=>{
+            this.login.setUser(user);
+            console.log(user);
+            //...redirect  Admin -> Admin dashboard
+            if(this.login.getUserRole() == 'Admin'){
+              window.location.href = '/admin';
+            }
+            //...redirect  User -> User dasdboard
+            else if(this.login.getUserRole() == 'User'){
+              window.location.href = 'user-dashboard';
+            } else {
+              this.login.logout();
+            }
+          }
+        )
       },
       (error)=>{
         console.log("error");
         console.log(error);
+        this.snack.open("Invalid Details. Try again !",'',{
+          duration: 3500,
+        })
       }
     );
   }

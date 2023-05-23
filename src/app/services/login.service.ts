@@ -9,9 +9,14 @@ export class LoginService {
 
   constructor(private http:HttpClient) {}
 
+  // get current user (which logged in)
+  public getCurrentUser() {
+    return this.http.get(baseUrl + '/current-user')
+  }
+
    // generate token
   public generateToken(loginData:any) {
-    return this.http.post('http://localhost:8080/generate-token', loginData);
+    return this.http.post(baseUrl + '/generate-token', loginData);
   }
 
   // login user: set token is localStorage

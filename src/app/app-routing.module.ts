@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { UserdashboardComponent } from './pages/user/userdashboard/userdashboard.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -17,8 +20,18 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    pathMatch: 'full'
-  }
+    pathMatch: 'full',
+  },
+  {
+    path: "admin",
+    component: DashboardComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'user-dashboard',
+    component: UserdashboardComponent,
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
