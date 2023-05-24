@@ -11,7 +11,7 @@ export class LoginService {
 
   // get current user (which logged in)
   public getCurrentUser() {
-    return this.http.get(baseUrl + '/current-user')
+    return this.http.get(baseUrl + '/current-user');
   }
 
    // generate token
@@ -39,7 +39,7 @@ export class LoginService {
   public logout() {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    return true
+    return true;
   }
 
   // get token

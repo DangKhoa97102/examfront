@@ -8,19 +8,19 @@
   <span class="example-spacer"></span>
 
   <!-- Login -->
-  <a [routerLink]="['/login']">
-    <div class="mr20">
-      <button mat-button class="example-icon favorite-icon">
-        <span>Login</span>
-      </button>
-    </div>
+  <a *ngIf="!login.isLoggedIn()" [routerLink]="['/login']" mat-button class="example-icon favorite-icon mr20">
+    <span> Login </span>
   </a>
   <!-- Signup -->
-  <a [routerLink]="['/signup']">
-    <div class="mr20">
-      <button mat-button class="example-icon favorite-icon">
-        <span>Signup</span>
-      </button>
-    </div>
+  <a *ngIf="!login.isLoggedIn()" [routerLink]="['/signup']" mat-button class="example-icon favorite-icon mr20">
+    <span>Signup</span>
+  </a>
+  <!-- Current User -->
+  <a *ngIf="login.isLoggedIn()" mat-button class="example-icon favorite-icon mr20">
+    {{login.getUser().username}}
+  </a>
+  <!-- Logout -->
+  <a (click)="logout()" *ngIf="login.isLoggedIn()" mat-button class="example-icon favorite-icon mr20">
+    <span>Logout</span>
   </a>
 </mat-toolbar>
