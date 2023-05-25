@@ -22,6 +22,10 @@ a {color: rgba(52, 65, 92, 0.918); text-decoration: none;}
     height: 18vh;
 }
 
+.m20{
+    margin: 20px !important;
+}
+
 .ml20{
     margin-left: 20px !important;
 }

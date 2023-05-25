@@ -23,6 +23,10 @@ import { from } from 'rxjs';
 import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { UserdashboardComponent } from './pages/user/userdashboard/userdashboard.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import {MatListModule} from '@angular/material/list';
+import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
+
 
 
 @NgModule({
@@ -35,6 +39,8 @@ import { UserdashboardComponent } from './pages/user/userdashboard/userdashboard
     HomeComponent,
     DashboardComponent,
     UserdashboardComponent,
+    ProfileComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +56,7 @@ import { UserdashboardComponent } from './pages/user/userdashboard/userdashboard
     MatChipsModule,
     MatCardModule,
     MatToolbarModule,
+    MatListModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
