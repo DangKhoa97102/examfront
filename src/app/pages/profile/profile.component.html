@@ -1,1 +1,45 @@
-zxcfvbxdcfbxdcfvbsxdfb
+<mat-card class="">
+    {{user | json}}
+    <h1 class="m20">Your Profile Details</h1>
+    <mat-card-content class="">
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="https://img.freepik.com/free-icon/user_318-563642.jpg?w=360" alt="" class="profile-image">
+                    <h1 class="mt20">{{user.firstname}} {{user.lastname}}</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-11 offset-md-1 pd0">
+                        <table class="table text-center">
+                            <tr>
+                                <td>Id</td>
+                                <td>{{user.id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr *ngIf="user.phone">
+                                <td>Phone</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{user.enabled?"Active":"UnActice"}}</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="btn-center">
+        <button mat-raised-button color="primary" class="mg10">UPDATE</button>
+        <button mat-raised-button color="accent" class="mg10">SHARE</button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,25 @@
+.profile-image {
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid rgba(26, 161, 214, 0.821);
+    border-radius: 50%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table tr td {
+    padding: 15px 10px;
+    border: 0.5px solid #e2e2e2;
+}
+
+.btn-center {
+    display: flex !important;
+    justify-content: center !important;
+}
+.bth-center button {
+    margin-right: 20px !important; 
+}
+

@@ -16,7 +16,7 @@
     <span>Signup</span>
   </a>
   <!-- Current User -->
-  <button *ngIf="isLoggedIn && user" mat-button class="example-icon favorite-icon mr20">
+  <button *ngIf="isLoggedIn && user" routerLink="/admin/profile" mat-button class="example-icon favorite-icon mr20">
     {{user.username}}
   </button>
   <!-- Logout -->

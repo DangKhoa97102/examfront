@@ -58,6 +58,10 @@ a {color: rgba(52, 65, 92, 0.918); text-decoration: none;}
     margin-bot: 10px !important;
 }
 
+.mg10 {
+    margin: 10px !important;
+}
+
 .p30{
     padding: 30px;
 }
